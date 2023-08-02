@@ -1,0 +1,83 @@
+#include <stdio.h>
+int main()
+{
+    int arr[50], num, x, y, temp;    
+    printf("Please Enter the Number of Elements you want in the array: ");
+    scanf("%d", &num);    
+    printf("Please Enter the Value of Elements: ");
+    for(x = 0; x < num; x++)
+        scanf("%d", &arr[x]);
+    for(x = 0; x < num - 1; x++)
+	{       
+        for(y = 0; y < num - x - 1; y++)
+		{          
+            if(arr[y] > arr[y + 1])
+			{               
+                temp = arr[y];
+                arr[y] = arr[y + 1];
+                arr[y + 1] = temp;
+            }
+        }
+    }
+    printf("Array after implementing bubble sort: ");
+    for(x = 0; x < num; x++){
+        printf("%d  ", arr[x]);
+    }
+    return 0;
+}
+#include<stdio.h>    
+#include<stdlib.h>  
+int main(){  
+int a[10][10],b[10][10],mul[10][10],r,c,i,j,k;    
+system("cls");  
+printf("enter the number of row=");    
+scanf("%d",&r);    
+printf("enter the number of column=");    
+scanf("%d",&c);    
+printf("enter the first matrix element=\n");    
+for(i=0;i<r;i++)    
+{    
+for(j=0;j<c;j++)    
+{    
+scanf("%d",&a[i][j]);    
+}    
+}    
+printf("enter the second matrix element=\n");    
+for(i=0;i<r;i++)    
+{    
+for(j=0;j<c;j++)    
+{    
+scanf("%d",&b[i][j]);    
+}    
+}    
+    
+printf("multiply of the matrix=\n");    
+for(i=0;i<r;i++)    
+{    
+for(j=0;j<c;j++)    
+{    
+mul[i][j]=0;    
+for(k=0;k<c;k++)    
+{    
+mul[i][j]+=a[i][k]*b[k][j];    
+}    
+}    
+}    
+//for printing result    
+for(i=0;i<r;i++) …
+#include <stdio.h>
+int main()
+{
+	int n1,n2;
+	printf("enter two positive integers:");
+	scanf("%d%d",&n1,&n2);
+	while(n1!=n2)
+	{
+		if(n1>n2)
+		n1-=n2;
+		else
+		n2-=n1;
+	}
+	printf("gcd=%d",n1);
+	return 0;
+}
